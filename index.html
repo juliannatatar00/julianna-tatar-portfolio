@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Julianna Tatar · Portfolio</title>
+<meta name="description" content="Portfolio of Julianna Tatar, Communication and Media Design student with a minor in Philosophy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Mrs+Saint+Delafield&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="site"></div>
+
+<!-- Page sections. Edit text and layout here. -->
+<template id="tpl-Main">
+<div class="page site" style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb">
+  <div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none"><img src="assets/martin-slovak-hills.jpg" alt="" style="width: 1px; height: 1px"><img src="assets/vienna-collage.jpg" alt="" style="width: 1px; height: 1px"></div>
+  <dc-import name="Nav" mode="scroll" hide-logo="{{yes}}" hint-size="100%,96px"></dc-import>
+  <section id="top" class="slide" style="justify-content: flex-start; background: #f5efeb; box-sizing: border-box; padding: 28px clamp(20px, 4vw, 56px) 56px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px 40px">
+    <a href="#top" onClick="{{goTop}}" style="display: inline-flex; flex-direction: column; text-decoration: none; color: #2f4156"><span style="font-family: &quot;Instrument Serif&quot;, Georgia, serif; font-size: clamp(40px, 5vw, 66px); line-height: 0.86; text-transform: uppercase">Julianna</span><span style="font-family: &quot;Instrument Serif&quot;, Georgia, serif; font-size: clamp(40px, 5vw, 66px); line-height: 0.86; text-transform: uppercase">Tatar</span><span style="align-self: flex-end; margin-top: 4px; font-family: &quot;Mrs Saint Delafield&quot;, cursive; font-size: clamp(40px, 5vw, 64px); line-height: 0.9; color: rgb(86, 124, 141)">Portfolio</span></a>
+    </div>
+    <div style="width: 100%; max-width: 1060px; margin: clamp(24px, 4vw, 48px) auto 0">
+      <h1 aria-label="Hello, I’m Julianna" style="margin: 0; position: relative; padding: clamp(34px, 5.6vw, 84px) clamp(0px, 4vw, 48px) clamp(34px, 5.6vw, 84px) clamp(16px, 7vw, 96px); font-weight: 400">
+        <img class="rise" src="assets/hero-julianna.jpg" alt="Julianna smiling outdoors under a tree in golden light" style="display: block; width: 100%; aspect-ratio: 5 / 2; object-fit: cover; object-position: 50% 30%">
+        <span class="rise2" aria-hidden="true" style="position: absolute; top: 0; left: 0; z-index: 1; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(56px, 9vw, 128px); line-height: 0.78; text-transform: uppercase; color: #2f4156">Hello,</span>
+        <span class="rise3" aria-hidden="true" style="position: absolute; right: 0; bottom: 0; z-index: 1; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(56px, 9vw, 128px); line-height: 0.78; text-transform: uppercase; white-space: nowrap; color: #2f4156">I’m Julianna</span>
+      </h1>
+      <div style="margin-top: 32px; display: flex; flex-wrap: wrap-reverse; justify-content: space-between; align-items: flex-end; gap: 32px">
+        <a class="pill" href="#journey" onClick="{{goJourney}}" style="display: inline-flex; align-items: center; padding: 14px 34px; border: 1px solid #2f4156; border-radius: 999px; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">FOLLOW MY JOURNEY</a>
+        <p class="rise3" style="margin: 0 0 0 auto; text-align: right; font-size: 14px; font-weight: 400; line-height: 1.75; letter-spacing: 0.14em">COMMUNICATION AND MEDIA DESIGN STUDENT<br>WITH A MINOR IN PHILOSOPHY</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="slide">
+    <dc-import name="Nav" mode="scroll" current="about" hint-size="100%,96px"></dc-import>
+    <dc-import name="About" embedded="{{yes}}" hint-size="100%,1000px"></dc-import>
+  </section>
+
+  <section id="journey" class="slide">
+    <dc-import name="Nav" mode="scroll" current="journey" hint-size="100%,96px"></dc-import>
+    <dc-import name="Journey" embedded="{{yes}}" hint-size="100%,1000px"></dc-import>
+  </section>
+
+  <section id="writing" class="slide">
+    <dc-import name="Nav" mode="scroll" current="writing" hint-size="100%,96px"></dc-import>
+    <dc-import name="Writing" embedded="{{yes}}" hint-size="100%,2300px"></dc-import>
+  </section>
+
+  <section id="contact" class="slide">
+    <dc-import name="Nav" mode="scroll" current="contact" hint-size="100%,96px"></dc-import>
+    <dc-import name="Contact" embedded="{{yes}}" hint-size="100%,900px"></dc-import>
+  </section>
+</div>
+</template>
+<template id="tpl-Nav">
+<header style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; color: #2f4156; background: #f5efeb; width: 100%; box-sizing: border-box; padding: 24px clamp(20px, 4vw, 56px); display: flex; flex-wrap: wrap; justify-content: {{justify}}; align-items: center; gap: 12px 40px; border-bottom: 1px solid rgba(47, 65, 86, 0.12)">
+  <sc-if value="{{showLogo}}" hint-placeholder-val="{{true}}">
+  <a href="{{homeHref}}" onClick="{{goHome}}" style="display: inline-flex; align-items: baseline; gap: 10px; text-decoration: none; color: #2f4156">
+    <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1; text-transform: uppercase">Julianna Tatar</span>
+    <span style="font-family: 'Mrs Saint Delafield', cursive; font-size: 30px; line-height: 0.8; color: #567c8d">Portfolio</span>
+  </a>
+  </sc-if>
+  <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 36px">
+    <sc-for list="{{links}}" as="l" hint-placeholder-count="5">
+      <a href="{{l.href}}" onClick="{{l.go}}" class="ul navlink {{l.cls}}" aria-current="{{l.cur}}" style="padding: 12px 0; font-size: 16px; font-weight: 400; letter-spacing: 0.14em; text-decoration: none">{{l.label}}</a>
+    </sc-for>
+  </nav>
+</header>
+</template>
+<template id="tpl-About">
+<div class="page" style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb">
+  <sc-if value="{{showNav}}" hint-placeholder-val="{{true}}">
+    <dc-import name="Nav" current="about" hint-size="100%,112px"></dc-import>
+  </sc-if>
+  <section id="about" style="background: #f5efeb; padding: 32px clamp(20px, 4vw, 56px) 72px">
+    <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center">
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 42px; line-height: 0.8; color: #567c8d">about me</p>
+        <h2 style="margin: 4px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 0.98; letter-spacing: -0.01em; max-width: 16ch">Every move gave me <em style="font-style: italic">a new story to tell.</em></h2>
+        <span aria-hidden="true" style="display: block; width: 64px; height: 1px; margin: 40px 0; background: #2f4156"></span>
+      </div>
+      <div style="width: 100%; display: flex; flex-direction: column; align-items: center">
+        <p style="margin: 0; font-size: 17px; line-height: 1.85; max-width: 60ch">Born in Slovakia and raised in Vienna, Austria, I grew up between languages and cultures, often speaking one at home and another everywhere else. In my sophomore year of high school, I came to the United States as an exchange student, attending Newton South High School and living with a host family. What was supposed to be one year turned into something bigger. I thrived academically and saw opportunities in the American education system that I wanted to keep pursuing, so I decided to stay. To continue my studies as an international student, I transferred to the Williston Northampton School, a boarding school in Western Massachusetts, where I finished high school.</p>
+        <div style="margin-top: 56px; width: 100%; max-width: 620px; border-top: 1px solid #2f4156; text-align: left">
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" onClick="{{a1}}" aria-expanded="{{ab1}}" style="width: 100%; min-height: 60px; padding: 16px 0; border: 0; background: transparent; color: #2f4156; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Instrument Serif', Georgia, serif; font-size: 21px; text-transform: uppercase">Languages<span aria-hidden="true" class="acc-icon {{ac1}}" style="font-family: Jost, Arial, sans-serif; font-size: 24px; font-weight: 300; line-height: 1">+</span></button>
+          <div class="acc {{ac1}}"><div class="acc-in"><p style="margin: 0; padding: 0 0 20px; font-size: 15px; line-height: 1.75">English is my fourth language, after Slovak, German and Russian. Learning to write, and eventually think, in it wasn’t an easy process, but it taught me persistence and how to find my place in unfamiliar environments. Today I speak English, German and Slovak fluently and understand Russian and Spanish, and each language has shaped how I see people and the world a little differently.</p></div></div>
+        </div>
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" onClick="{{a2}}" aria-expanded="{{ab2}}" style="width: 100%; min-height: 60px; padding: 16px 0; border: 0; background: transparent; color: #2f4156; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Instrument Serif', Georgia, serif; font-size: 21px; text-transform: uppercase">Currently<span aria-hidden="true" class="acc-icon {{ac2}}" style="font-family: Jost, Arial, sans-serif; font-size: 24px; font-weight: 300; line-height: 1">+</span></button>
+          <div class="acc {{ac2}}"><div class="acc-in"><p style="margin: 0; padding: 0 0 20px; font-size: 15px; line-height: 1.75">I’m currently studying Communication and Media Studies at Northeastern University, with a minor in Philosophy. With so much of what we see today shaped by social media and AI, I think it’s more important than ever to question what we consume and how it’s presented. Philosophy helps me do that, and it connects closely to my interests in media and screenwriting, where the stories we tell influence how people see the world and each other.</p></div></div>
+        </div>
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" onClick="{{a3}}" aria-expanded="{{ab3}}" style="width: 100%; min-height: 60px; padding: 16px 0; border: 0; background: transparent; color: #2f4156; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Instrument Serif', Georgia, serif; font-size: 21px; text-transform: uppercase">Certificates<span aria-hidden="true" class="acc-icon {{ac3}}" style="font-family: Jost, Arial, sans-serif; font-size: 24px; font-weight: 300; line-height: 1">+</span></button>
+          <div class="acc {{ac3}}"><div class="acc-in">
+            <div style="padding: 0 0 22px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px">
+              <p style="margin: 0; font-size: 15px; line-height: 1.6"><span style="font-weight: 400">CITI Program: Social &amp; Behavioral Research</span><br>Human Subjects Research, Basic Course<br>Northeastern University, completed October 2026</p>
+              <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px">
+                <button type="button" class="pill" onClick="{{openCert}}" style="min-height: 40px; padding: 10px 22px; border: 1px solid #2f4156; border-radius: 999px; background: transparent; color: #2f4156; font: 400 11px Jost, Arial, sans-serif; letter-spacing: 0.12em; cursor: pointer">VIEW CERTIFICATE</button>
+                <a class="ul" href="https://www.citiprogram.org/verify/?w337246ea-6572-421b-82ad-1167bc87245c-80222318" target="_blank" rel="noopener noreferrer" style="padding: 8px 0; font-size: 11px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">VERIFY ↗</a>
+              </div>
+            </div>
+          </div></div>
+        </div>
+        </div>
+        <button type="button" class="pill" onClick="{{openResume}}" style="display: inline-block; margin-top: 48px; padding: 15px 34px; border: 0; border-radius: 999px; background: #2f4156; color: #f5efeb; font: 400 12px Jost, Arial, sans-serif; letter-spacing: 0.12em; cursor: pointer">VIEW MY RÉSUMÉ</button>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{resumeOpen}}" hint-placeholder-val="{{false}}">
+    <div class="fade" role="dialog" aria-modal="true" aria-label="Résumé" style="position: fixed; inset: 0; z-index: 1000; overflow-y: auto; background: rgba(47, 65, 86, 0.92); box-sizing: border-box; padding: clamp(16px, 3vw, 40px)">
+      <div style="max-width: 860px; margin: 0 auto">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px">
+          <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 32px; color: #f5efeb">Résumé</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap">
+            <a class="pill" href="assets/resume.pdf" target="_blank" rel="noopener" style="padding: 12px 24px; border: 1px solid #f5efeb; border-radius: 999px; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">OPEN PDF</a>
+            <button type="button" class="pill" onClick="{{closeResume}}" style="min-height: 44px; padding: 12px 24px; border: 0; border-radius: 999px; background: #f5efeb; color: #2f4156; font: 400 12px Jost, Arial, sans-serif; letter-spacing: 0.12em; cursor: pointer">CLOSE</button>
+          </div>
+        </div>
+        <img src="assets/resume.jpg" alt="Julianna Tatar’s résumé: education, experience, leadership and activities, skills and interests" style="display: block; width: 100%; height: auto; background: #FFFFFF; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25)">
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{certOpen}}" hint-placeholder-val="{{false}}">
+    <div class="fade" role="dialog" aria-modal="true" aria-label="CITI Program certificate" style="position: fixed; inset: 0; z-index: 1000; overflow-y: auto; background: rgba(47, 65, 86, 0.92); box-sizing: border-box; padding: clamp(16px, 3vw, 40px)">
+      <div style="max-width: 960px; margin: 0 auto">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 20px">
+          <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 32px; color: #f5efeb">CITI Program certificate</p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap">
+            <a class="pill" href="assets/citi-certificate.pdf" target="_blank" rel="noopener" style="padding: 12px 24px; border: 1px solid #f5efeb; border-radius: 999px; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">OPEN PDF</a>
+            <a class="pill" href="https://www.citiprogram.org/verify/?w337246ea-6572-421b-82ad-1167bc87245c-80222318" target="_blank" rel="noopener noreferrer" style="padding: 12px 24px; border: 1px solid #f5efeb; border-radius: 999px; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">VERIFY</a>
+            <button type="button" class="pill" onClick="{{closeCert}}" style="min-height: 44px; padding: 12px 24px; border: 0; border-radius: 999px; background: #f5efeb; color: #2f4156; font: 400 12px Jost, Arial, sans-serif; letter-spacing: 0.12em; cursor: pointer">CLOSE</button>
+          </div>
+        </div>
+        <img src="assets/citi-certificate.jpg" alt="CITI Program completion certificate for Julianna Tatar: Social and Behavioral Research, Human Subjects Research, Basic Course, Northeastern University, completed 10 October 2026" style="display: block; width: 100%; height: auto; background: #FFFFFF; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25)">
+      </div>
+    </div>
+  </sc-if>
+</div>
+</template>
+<template id="tpl-Journey">
+<div class="page" style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb">
+  <div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none"><img src="assets/martin-slovak-hills.jpg" alt="" style="width: 1px; height: 1px"><img src="assets/vienna-collage.jpg" alt="" style="width: 1px; height: 1px"></div>
+  <sc-if value="{{showNav}}" hint-placeholder-val="{{true}}">
+    <dc-import name="Nav" current="journey" hint-size="100%,112px"></dc-import>
+  </sc-if>
+  <section id="journey" style="background: #2f4156; color: #f5efeb; padding: 40px 24px 56px">
+    <div style="max-width: 1200px; margin: 0 auto">
+      <sc-if value="{{onMap}}" hint-placeholder-val="{{true}}">
+      <div style="text-align: center">
+        <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 46px; line-height: 0.8; color: #c8d9e6">follow me</p>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5.5vw, 72px); line-height: 0.9; text-transform: uppercase">The Journey</h2>
+        <p style="margin: 20px auto 0; font-size: 16px; line-height: 1.7; max-width: 46ch; color: #c8d9e6">Five places that shaped how I see, listen and write. Select a place to open its chapter.</p>
+      </div>
+
+      <div id="map" style="margin: 40px auto 0; position: relative; width: 100%; max-width: 820px; aspect-ratio: 2 / 1">
+        <svg viewBox="0 0 1000 500" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%">
+          <path d="M0,50 L140,36 L215,80 L262,140 L298,196 L284,222 L304,248 L262,300 L238,360 L190,420 L128,500 L0,500 Z" fill="#364b62" stroke="#c8d9e6" stroke-opacity="0.55" stroke-width="1"></path>
+          <path d="M1000,30 L712,26 L664,84 L630,150 L668,196 L646,258 L702,318 L684,404 L758,384 L812,446 L902,418 L1000,462 Z" fill="#364b62" stroke="#c8d9e6" stroke-opacity="0.55" stroke-width="1"></path>
+          <text x="500" y="250" text-anchor="middle" font-family="Instrument Serif, Georgia, serif" font-size="20" font-style="italic" fill="#c8d9e6" fill-opacity="0.8">Atlantic Ocean</text>
+          <path class="route" d="M820,220 L770,270 C650,430 350,430 205,265 L120,230 Q190,186 255,215" fill="none" stroke="#c8d9e6" stroke-width="1.4" stroke-linecap="round"></path>
+        </svg>
+        <sc-for list="{{stops}}" as="item" hint-placeholder-count="5">
+          <button type="button" class="pin" onClick="{{item.pick}}" aria-label="Go to chapter {{item.num}}: {{item.place}}" style="display: block; position: absolute; left: {{item.x}}%; top: {{item.y}}%; transform: translate(-50%, -50%); width: 44px; height: 44px; border: 0; padding: 0; background: transparent; cursor: pointer">
+            <sc-if value="{{item.active}}" hint-placeholder-val="{{false}}">
+              <span class="pin-ring"></span>
+              <span style="position: absolute; inset: 0; margin: auto; width: 12px; height: 12px; border-radius: 50%; background: #f5efeb"></span>
+            </sc-if>
+            <sc-if value="{{item.idle}}" hint-placeholder-val="{{true}}">
+              <span style="position: absolute; inset: 0; margin: auto; width: 8px; height: 8px; border-radius: 50%; background: #c8d9e6"></span>
+            </sc-if>
+            <span class="pin-label" style="position: absolute; left: {{item.lx}}; top: {{item.ly}}; white-space: nowrap; font-family: Jost, Arial, sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.14em; color: #f5efeb">{{item.label}}</span>
+          </button>
+        </sc-for>
+      </div>
+
+      <div role="group" aria-label="Chapters" style="margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 24px; border-top: 1px solid #576b82">
+        <sc-for list="{{stops}}" as="item" hint-placeholder-count="5">
+          <sc-if value="{{item.active}}" hint-placeholder-val="{{false}}">
+            <button type="button" onClick="{{item.pick}}" aria-current="step" style="min-height: 64px; padding: 16px 0; border: 0; border-top: 2px solid #f5efeb; margin-top: -1px; background: transparent; color: #f5efeb; text-align: center; cursor: pointer; font-family: 'Instrument Serif', Georgia, serif; font-size: 22px">{{item.place}}</button>
+          </sc-if>
+          <sc-if value="{{item.idle}}" hint-placeholder-val="{{true}}">
+            <button type="button" onClick="{{item.pick}}" style="min-height: 64px; padding: 16px 0; border: 0; border-top: 2px solid transparent; margin-top: -1px; background: transparent; color: #c8d9e6; text-align: center; cursor: pointer; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px">{{item.place}}</button>
+          </sc-if>
+        </sc-for>
+      </div>
+
+      </sc-if>
+      <sc-if value="{{onChapter}}" hint-placeholder-val="{{false}}">
+      <div class="fade">
+      <div style="display: flex; justify-content: flex-start; margin-bottom: 20px"><button type="button" class="pill" onClick="{{backToMap}}" style="min-height: 46px; padding: 12px 26px; border: 1px solid #f5efeb; border-radius: 999px; background: transparent; color: #f5efeb; font: 400 12px Jost, Arial, sans-serif; letter-spacing: 0.12em; cursor: pointer">← BACK TO THE MAP</button></div>
+      <div id="chapter" aria-live="polite" style="margin-top: 0">
+        <sc-if value="{{c0}}" hint-placeholder-val="{{true}}"><div class="fade"><dc-import name="Martin" hint-size="100%,720px"></dc-import></div></sc-if>
+        <sc-if value="{{c1}}" hint-placeholder-val="{{false}}"><div class="fade"><dc-import name="Vienna" hint-size="100%,1500px"></dc-import></div></sc-if>
+        <sc-if value="{{c2}}" hint-placeholder-val="{{false}}"><div class="fade"><dc-import name="Newton" hint-size="100%,720px"></dc-import></div></sc-if>
+        <sc-if value="{{c3}}" hint-placeholder-val="{{false}}"><div class="fade"><dc-import name="Northampton" hint-size="100%,720px"></dc-import></div></sc-if>
+        <sc-if value="{{c4}}" hint-placeholder-val="{{false}}"><div class="fade"><dc-import name="Boston" hint-size="100%,720px"></dc-import></div></sc-if>
+      </div>
+      <div style="display: flex; justify-content: space-between; gap: 12px; margin-top: 24px">
+        <button type="button" class="pill" onClick="{{prev}}" disabled="{{isFirst}}" style="min-height: 48px; padding: 12px 30px; border: 1px solid #f5efeb; border-radius: 999px; background: transparent; color: #f5efeb; font: 400 13px Jost, Arial, sans-serif; letter-spacing: 0.12em; cursor: pointer">PREVIOUS PLACE</button>
+        <button type="button" onClick="{{backToMap}}" style="align-self: center; border: 0; background: transparent; cursor: pointer; font-family: Jost, Arial, sans-serif; padding: 12px 0; color: #c8d9e6; font-size: 13px; font-weight: 400; letter-spacing: 0.14em; text-decoration: underline; text-underline-offset: 5px">BACK TO THE MAP</button>
+        <button type="button" class="pill" onClick="{{next}}" disabled="{{isLast}}" style="min-height: 48px; padding: 12px 30px; border: 1px solid #f5efeb; border-radius: 999px; background: transparent; color: #f5efeb; font: 400 13px Jost, Arial, sans-serif; letter-spacing: 0.12em; cursor: pointer">NEXT PLACE</button>
+      </div>
+      </div>
+      </sc-if>
+    </div>
+  </section>
+</div>
+</template>
+<template id="tpl-Writing">
+<div class="page" style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb">
+  <sc-if value="{{showNav}}" hint-placeholder-val="{{true}}">
+    <dc-import name="Nav" current="writing" hint-size="100%,112px"></dc-import>
+  </sc-if>
+  <section id="work" style="position: relative; overflow: hidden; background: #f5efeb; padding: 48px 24px 96px">
+    <div style="position: relative; max-width: 980px; margin: 0 auto">
+      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 16px">
+        <p style="margin: 0 0 4px; font-family: 'Mrs Saint Delafield', cursive; font-size: 52px; line-height: 0.8; color: #567c8d">words I’m proud of</p>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(48px, 7vw, 96px); line-height: 0.9; text-transform: uppercase">Selected Writing</h2>
+        <span aria-hidden="true" style="display: block; width: 64px; height: 1px; margin-top: 32px; background: #2f4156"></span>
+      </div>
+      
+
+      <p style="margin: 56px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 30px">Recent writing</p>
+      <div style="margin-top: 20px; border-top: 1px solid #2f4156">
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" class="row" onClick="{{t0}}" aria-expanded="{{o0}}" style="width: 100%; min-height: 76px; padding: 20px 0; border: 0; background: transparent; color: #2f4156; text-align: left; cursor: pointer; display: grid; grid-template-columns: 72px minmax(0, 1fr) 32px; gap: 20px; align-items: center">
+            <span class="num" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 36px; color: #567c8d">01</span>
+            <span style="display: flex; flex-direction: column; gap: 6px">
+              <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Beyond Judgment: How <em>Euphoria</em> Lets Us Feel Before We Think</span>
+              <span style="font-family: Jost, Arial, sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.1em">RESEARCH PAPER, MSCR 2220, NORTHEASTERN UNIVERSITY, 2026</span>
+            </span>
+            <span aria-hidden="true" class="acc-icon {{rc0}}" style="font-family: Jost, Arial, sans-serif; font-size: 26px; font-weight: 300; line-height: 1">+</span>
+          </button>
+          <div class="acc {{rc0}}"><div class="acc-in">
+            <div class="indent" style="padding: 4px 0 40px 92px; display: flex; flex-direction: column; gap: 16px">
+              <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.14em">ABOUT THIS PIECE</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.8; max-width: 62ch">An analysis of nine drug sequences from season 1 of HBO’s <em>Euphoria</em>, looking at how cinematography and mise-en-scène place the viewer inside Rue’s experience. Drawing on Merleau-Ponty’s pre-reflective experience and Heidegger’s einräumen through Akoury (2020), I argue that the show’s surreal lighting, close-ups, slow motion and long takes open up space for empathy rather than judgment.</p>
+              <p style="margin: 8px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.5; max-width: 58ch">“The show does not prescribe a way of thinking; instead, it creates conditions that allow viewers to reconsider pre-existing ideological frameworks.”</p>
+              <a class="pill" href="assets/writing-1-paper.pdf" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: 4px; padding: 13px 28px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">READ THE PAPER (PDF)</a>
+            </div>
+          </div></div>
+        </div>
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" class="row" onClick="{{t1}}" aria-expanded="{{o1}}" style="width: 100%; min-height: 76px; padding: 20px 0; border: 0; background: transparent; color: #2f4156; text-align: left; cursor: pointer; display: grid; grid-template-columns: 72px minmax(0, 1fr) 32px; gap: 20px; align-items: center">
+            <span class="num" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 36px; color: #567c8d">02</span>
+            <span style="display: flex; flex-direction: column; gap: 6px">
+              <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15"><em>Lethe</em></span>
+              <span style="font-family: Jost, Arial, sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.1em">ORIGINAL SHORT SCREENPLAY</span>
+            </span>
+            <span aria-hidden="true" class="acc-icon {{rc1}}" style="font-family: Jost, Arial, sans-serif; font-size: 26px; font-weight: 300; line-height: 1">+</span>
+          </button>
+          <div class="acc {{rc1}}"><div class="acc-in">
+            <div class="indent" style="padding: 4px 0 40px 92px; display: flex; flex-direction: column; gap: 16px">
+              <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.14em">ABOUT THIS PIECE</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.8; max-width: 62ch">Heartbroken after a breakup, Leo signs up for an experimental procedure that erases memories, working backwards from the most recent. Forced to watch his relationship with Maya unravel in reverse, he realizes too late what he is losing. A short drama about memory, regret and whether some things should ever be forgotten.</p>
+              <p style="margin: 8px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.5; max-width: 58ch">“Some memories don’t heal with time, they just stay open forever.”</p>
+              <a class="pill" href="assets/writing-2-screenplay.pdf" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: 4px; padding: 13px 28px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">READ THE SCREENPLAY (PDF)</a>
+            </div>
+          </div></div>
+        </div>
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" class="row" onClick="{{t2}}" aria-expanded="{{o2}}" style="width: 100%; min-height: 76px; padding: 20px 0; border: 0; background: transparent; color: #2f4156; text-align: left; cursor: pointer; display: grid; grid-template-columns: 72px minmax(0, 1fr) 32px; gap: 20px; align-items: center">
+            <span class="num" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 36px; color: #567c8d">03</span>
+            <span style="display: flex; flex-direction: column; gap: 6px">
+              <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Speaking Through Silence: Frances Ellen Watkins Harper and the Null Persona</span>
+              <span style="font-family: Jost, Arial, sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.1em">FINAL PAPER, RHETORIC AND PERSUASION</span>
+            </span>
+            <span aria-hidden="true" class="acc-icon {{rc2}}" style="font-family: Jost, Arial, sans-serif; font-size: 26px; font-weight: 300; line-height: 1">+</span>
+          </button>
+          <div class="acc {{rc2}}"><div class="acc-in">
+            <div class="indent" style="padding: 4px 0 40px 92px; display: flex; flex-direction: column; gap: 16px">
+              <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.14em">ABOUT THIS PIECE</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.8; max-width: 62ch">A rhetorical analysis of Harper’s 1866 speech at the Eleventh National Women’s Rights Convention. Using Dana Cloud’s concept of the Null Persona, alongside archival coverage from <em>The Liberator</em>, I show how Harper used metaphor, biblical allusion and carefully framed questions to address injustices she could not safely name outright.</p>
+              <p style="margin: 8px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.5; max-width: 58ch">“Rather than naming these injustices as accusations against her predominantly white audience, Harper used methods such as metaphors and biblical allusions.”</p>
+              <a class="pill" href="assets/writing-3-paper.pdf" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: 4px; padding: 13px 28px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">READ THE PAPER (PDF)</a>
+            </div>
+          </div></div>
+        </div>
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" class="row" onClick="{{t3}}" aria-expanded="{{o3}}" style="width: 100%; min-height: 76px; padding: 20px 0; border: 0; background: transparent; color: #2f4156; text-align: left; cursor: pointer; display: grid; grid-template-columns: 72px minmax(0, 1fr) 32px; gap: 20px; align-items: center">
+            <span class="num" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 36px; color: #567c8d">04</span>
+            <span style="display: flex; flex-direction: column; gap: 6px">
+              <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Artificial by Design: Setting in Taylor Swift’s <em>The Man</em></span>
+              <span style="font-family: Jost, Arial, sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.1em">FORMAL ANALYSIS, MISE-EN-SCÈNE</span>
+            </span>
+            <span aria-hidden="true" class="acc-icon {{rc3}}" style="font-family: Jost, Arial, sans-serif; font-size: 26px; font-weight: 300; line-height: 1">+</span>
+          </button>
+          <div class="acc {{rc3}}"><div class="acc-in">
+            <div class="indent" style="padding: 4px 0 40px 92px; display: flex; flex-direction: column; gap: 16px">
+              <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.14em">ABOUT THIS PIECE</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.8; max-width: 62ch">A close reading of eleven settings in the music video for <em>The Man</em>, from the skyscraper office to the painted-sky wedding. Using Bordwell and Thompson’s definition of setting, I trace how every space is deliberately built to look staged, turning artificiality itself into the video’s message.</p>
+              <p style="margin: 8px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.5; max-width: 58ch">“In Taylor Swift’s music video, there is a consistent and deliberate construction of artificiality across each setting.”</p>
+              <a class="pill" href="assets/writing-4-analysis.pdf" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: 4px; padding: 13px 28px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">READ THE ANALYSIS (PDF)</a>
+            </div>
+          </div></div>
+        </div>
+        <div style="border-bottom: 1px solid #2f4156">
+          <button type="button" class="row" onClick="{{t4}}" aria-expanded="{{o4}}" style="width: 100%; min-height: 76px; padding: 20px 0; border: 0; background: transparent; color: #2f4156; text-align: left; cursor: pointer; display: grid; grid-template-columns: 72px minmax(0, 1fr) 32px; gap: 20px; align-items: center">
+            <span class="num" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 36px; color: #567c8d">05</span>
+            <span style="display: flex; flex-direction: column; gap: 6px">
+              <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Into the Sunken Place: Subjective Narration in <em>Get Out</em></span>
+              <span style="font-family: Jost, Arial, sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.1em">NARRATIVE ANALYSIS</span>
+            </span>
+            <span aria-hidden="true" class="acc-icon {{rc4}}" style="font-family: Jost, Arial, sans-serif; font-size: 26px; font-weight: 300; line-height: 1">+</span>
+          </button>
+          <div class="acc {{rc4}}"><div class="acc-in">
+            <div class="indent" style="padding: 4px 0 40px 92px; display: flex; flex-direction: column; gap: 16px">
+              <p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.14em">ABOUT THIS PIECE</p>
+              <p style="margin: 0; font-size: 16px; line-height: 1.8; max-width: 62ch">A segmentation of the Sunken Place scene from Jordan Peele’s <em>Get Out</em>. I follow the repeated close-up of the teacup as the cue that moves the narration from objective to fully subjective depth, pulling the viewer step by step into the protagonist’s loss of control.</p>
+              <p style="margin: 8px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.5; max-width: 58ch">“Each time the teacup appears on camera, it functions as a visual cue, triggering a slow zoom toward the protagonist’s face.”</p>
+              <a class="pill" href="assets/writing-5-analysis.pdf" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: 4px; padding: 13px 28px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">READ THE ANALYSIS (PDF)</a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+
+      <div style="margin-top: 96px">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 24px; margin-bottom: 20px">
+          <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 30px">Published in The Willistonian</p>
+          <p style="margin: 0; font-size: 12px; font-weight: 400; letter-spacing: 0.12em">STAFF WRITER AND EDITOR, 2024–2025</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 0 48px">
+          <a class="artrow" href="https://www.willistonian.org/walgreens-closure-causes-frustration-among-students/" target="_blank" rel="noopener noreferrer" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 22px 0; border-top: 1px solid #2f4156; color: #2f4156; text-decoration: none">
+            <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 400; letter-spacing: 0.12em">APRIL 2, 2025</span><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Walgreens Closure Causes Frustration Among Students</span></span>
+            <span class="arw" aria-hidden="true" style="font-size: 20px; line-height: 1.6">↗</span>
+          </a>
+          <a class="artrow" href="https://www.willistonian.org/emv-wins-annual-lip-sync/" target="_blank" rel="noopener noreferrer" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 22px 0; border-top: 1px solid #2f4156; color: #2f4156; text-decoration: none">
+            <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 400; letter-spacing: 0.12em">FEBRUARY 16, 2025</span><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">EMV Wins Annual Lip Sync</span></span>
+            <span class="arw" aria-hidden="true" style="font-size: 20px; line-height: 1.6">↗</span>
+          </a>
+          <a class="artrow" href="https://www.willistonian.org/norovirus-wave-spreads-through-campus/" target="_blank" rel="noopener noreferrer" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 22px 0; border-top: 1px solid #2f4156; color: #2f4156; text-decoration: none">
+            <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 400; letter-spacing: 0.12em">FEBRUARY 3, 2025</span><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Norovirus Spreads Through Campus</span></span>
+            <span class="arw" aria-hidden="true" style="font-size: 20px; line-height: 1.6">↗</span>
+          </a>
+          <a class="artrow" href="https://www.willistonian.org/speech-contest-moves-into-final-round/" target="_blank" rel="noopener noreferrer" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 22px 0; border-top: 1px solid #2f4156; color: #2f4156; text-decoration: none">
+            <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 400; letter-spacing: 0.12em">JANUARY 24, 2025</span><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Speech Contest Moves into Final Round</span></span>
+            <span class="arw" aria-hidden="true" style="font-size: 20px; line-height: 1.6">↗</span>
+          </a>
+          <a class="artrow" href="https://www.willistonian.org/canceled-flights-and-long-airport-waits-the-international-student-travel-experience/" target="_blank" rel="noopener noreferrer" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 22px 0; border-top: 1px solid #2f4156; color: #2f4156; text-decoration: none">
+            <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 400; letter-spacing: 0.12em">JANUARY 23, 2025</span><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">Canceled Flights and Long Airport Waits: The International Student Travel Experience</span></span>
+            <span class="arw" aria-hidden="true" style="font-size: 20px; line-height: 1.6">↗</span>
+          </a>
+          <a class="artrow" href="https://www.willistonian.org/the-five-love-languages-why-different-people-express-their-love-differently/" target="_blank" rel="noopener noreferrer" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 22px 0; border-top: 1px solid #2f4156; color: #2f4156; text-decoration: none">
+            <span style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 400; letter-spacing: 0.12em">DECEMBER 17, 2024</span><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.15">The Five Love Languages: The Many Ways of Expressing Love</span></span>
+            <span class="arw" aria-hidden="true" style="font-size: 20px; line-height: 1.6">↗</span>
+          </a>
+        </div>
+        <a class="pill" href="https://www.willistonian.org/staff_name/julianna-tatar-25/" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 28px; padding: 16px 34px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 13px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">SEE ALL MY ARTICLES</a>
+      </div>
+    </div>
+  </section>
+</div>
+</template>
+<template id="tpl-Contact">
+<div class="page" style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb">
+  <sc-if value="{{showNav}}" hint-placeholder-val="{{true}}">
+    <dc-import name="Nav" current="contact" hint-size="100%,112px"></dc-import>
+  </sc-if>
+  <section id="contact" style="background: #f5efeb; padding: 48px 24px 56px; text-align: center; min-height: 760px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center">
+    <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 46px; line-height: 0.8; color: #567c8d">say hello</p>
+    <h2 style="margin: 0 auto; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 0.92; text-transform: uppercase; max-width: 14ch">Let’s create something together</h2>
+    <div style="margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px">
+      <a class="pill" href="mailto:juli.tatar10@gmail.com" style="padding: 16px 36px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 13px; font-weight: 400; letter-spacing: 0.08em; text-decoration: none">juli.tatar10@gmail.com</a>
+      <a class="pill" href="tel:+14016154440" style="padding: 15px 36px; border: 1px solid #2f4156; border-radius: 999px; font-size: 13px; font-weight: 400; letter-spacing: 0.08em; text-decoration: none">+1 (401) 615-4440</a>
+      <a class="pill" href="https://www.linkedin.com/in/julianna-tatar-198252360" target="_blank" rel="noopener noreferrer" style="padding: 15px 36px; border: 1px solid #2f4156; border-radius: 999px; font-size: 13px; font-weight: 400; letter-spacing: 0.08em; text-decoration: none">LinkedIn ↗</a>
+    </div>
+    <p style="margin: 72px 0 0; font-size: 13px; letter-spacing: 0.12em">JULIANNA TATAR, BOSTON AND VIENNA</p>
+  </section>
+</div>
+</template>
+<template id="tpl-Martin">
+<div style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb; width: 100%; box-sizing: border-box; padding: clamp(24px, 3vw, 40px) clamp(20px, 4vw, 56px) clamp(32px, 4vw, 56px)">
+  <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column">
+
+    <div style="position: relative; width: 100%; max-width: 460px; margin: 0 auto">
+      <img src="assets/martin-slovak-hills.jpg" alt="Black-and-white photo of rolling Slovak hills with hay stooks drying in the fields" style="display: block; width: 100%; height: auto; aspect-ratio: 800 / 603; object-fit: cover">
+      <div style="position: absolute; right: clamp(-48px, -4vw, 0px); bottom: -56px; width: 250px; background: #c8d9e6; box-sizing: border-box; padding: 20px 22px 22px; box-shadow: 0 12px 30px rgba(47, 65, 86, 0.14); transform: rotate(2deg); display: flex; flex-direction: column; gap: 6px">
+        <p lang="sk" style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 40px; line-height: 1">ahoj</p>
+        <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 17px">/ˈaɦoj/ interjection, Slovak, informal</p>
+        <ol style="margin: 8px 0 0; padding: 10px 0 0 20px; border-top: 1px solid #2f4156; font-size: 14px; font-weight: 400; line-height: 1.7">
+          <li>hello, hi</li>
+          <li>bye</li>
+        </ol>
+      </div>
+    </div>
+
+    <p style="margin: 88px 0 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 44px; line-height: 0.8; color: #567c8d">Chapter one</p>
+    <h2 style="margin: 10px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 4.5vw, 56px); line-height: 0.92; text-transform: uppercase">Martin, Slovakia</h2>
+    <p style="margin: 14px 0 0; font-size: 12px; font-weight: 400; letter-spacing: 0.14em">WHERE I WAS BORN</p>
+    <p style="margin: 28px 0 0; font-size: 17px; line-height: 1.9">When asked where I was born, I am always eager to talk about Martin, as it allows me to remind myself where my roots truly lie. A small city in the heart of Slovakia, surrounded by mountains that protect it like a blanket, filled with the smell of nature and the silence of the night, where even the darkness never feels scary. It is the place I will always call my forever home.</p>
+
+    <span aria-hidden="true" style="display: block; width: 48px; height: 1px; margin: 44px 0; background: #2f4156"></span>
+
+    <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; font-size: 34px; line-height: 1.1">My forever home</h3>
+    <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.9">Although not known by many, I always recommend this place, not only because it is where I spent my childhood and therefore hold so close to my heart, but also because, whenever I return, I feel a sense of freedom that no other place can give me. This place taught me so much about my Slovak heritage, something I cherish and carry with me regardless of where in the world I find myself.</p>
+
+  </div>
+</div>
+</template>
+<template id="tpl-Vienna">
+<div style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb; width: 100%; box-sizing: border-box; padding: clamp(24px, 3vw, 40px) clamp(20px, 4vw, 56px) clamp(32px, 4vw, 56px)">
+
+  <div style="max-width: 760px; margin: 0 auto">
+    <div class="vcollage" style="position: relative; width: 100%">
+      <img src="assets/vienna-collage.jpg" alt="A black-and-white collage of Vienna: birch trees, a grand street, friends in dirndls, a museum staircase, a still-life painting, a gallery, the Hofburg, St. Stephen’s Cathedral and a park at sunset" style="display: block; width: 100%; height: auto; aspect-ratio: 1371 / 904">
+    </div>
+  </div>
+
+  <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column">
+    <div style="margin-top: 64px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 40px">
+      <div style="display: flex; flex-direction: column">
+      <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 44px; line-height: 0.8; color: #567c8d">Chapter two</p>
+      <h2 style="margin: 10px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 4.5vw, 56px); line-height: 0.92; text-transform: uppercase">Vienna, Austria</h2>
+      <p style="margin: 14px 0 0; font-size: 12px; font-weight: 400; letter-spacing: 0.14em">THE CITY I CALL HOME</p>
+      </div>
+      <div style="width: 230px; background: #c8d9e6; box-sizing: border-box; padding: 18px 20px 20px; box-shadow: 0 12px 28px rgba(47, 65, 86, 0.12); transform: rotate(2deg); display: flex; flex-direction: column; gap: 5px">
+        <p lang="de-AT" style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 36px; line-height: 1">servus</p>
+        <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 15px">/ˈzɛrvʊs/ interjection, German, informal (chiefly Austria and Southern Germany)</p>
+        <ol style="margin: 6px 0 0; padding: 8px 0 0 18px; border-top: 1px solid #2f4156; font-size: 13px; font-weight: 400; line-height: 1.7">
+          <li>hello, hi</li>
+          <li>goodbye, bye, farewell</li>
+          <li>cheers (as a toast)</li>
+        </ol>
+        <p style="margin: 2px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 14px">from Latin servus, “servant”</p>
+      </div>
+    </div>
+    <p style="margin: 28px 0 0; font-size: 17px; line-height: 1.9">Vienna, the city I currently call home, has always been surrounded by an atmosphere that makes creativity feel almost inevitable. Growing up, I never fully realized the privilege of being able to live and go to school in a city so rich in history and artistic expression. Known for its musical heritage, Vienna was ultimately what led me to dance, which remains a big part of who I am today. When thinking about my creative side, I have to thank Vienna for that. Perhaps we do not always recognize the influence of our surroundings until we look back and realize how much of ourselves they have shaped.</p>
+    <span aria-hidden="true" style="display: block; width: 48px; height: 1px; margin: 44px 0; background: #2f4156"></span>
+    <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; font-size: 34px; line-height: 1.1">Lessons in discipline</h3>
+    <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.9">From kindergarten until my freshman year of high school, I was fortunate enough to be educated within the German educational system, which taught me the importance of persistence and discipline. It shaped not only the way I approach challenges but also the way I understand the importance of dedication.</p>
+  </div>
+
+
+</div>
+</template>
+<template id="tpl-Newton">
+<div style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb; width: 100%; box-sizing: border-box; padding: clamp(24px, 3vw, 40px) clamp(20px, 4vw, 56px) clamp(32px, 4vw, 56px)">
+
+  <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column">
+    <div style="margin-top: 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 40px">
+      <div style="display: flex; flex-direction: column">
+      <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 44px; line-height: 0.8; color: #567c8d">Chapter three</p>
+      <h2 style="margin: 10px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 4.5vw, 56px); line-height: 0.92; text-transform: uppercase">Newton, Massachusetts</h2>
+      <p style="margin: 14px 0 0; font-size: 12px; font-weight: 400; letter-spacing: 0.14em">MY YEAR ABROAD</p>
+      </div>
+    </div>
+    <p style="margin: 28px 0 0; font-size: 17px; line-height: 1.9">When I was 15 years old, I decided that I wanted to spend a year abroad in the United States. I had always dreamed of experiencing the American high school experience, and the idea of living with a host family who could introduce me to a new perspective, their values, and traditions was something that excited me because I knew it would expose me to ways of life different from my own.</p>
+    <div style="align-self: center; width: 280px; margin: 56px 0; background: #c8d9e6; box-sizing: border-box; padding: 18px 20px 20px; box-shadow: 0 12px 28px rgba(47, 65, 86, 0.12); transform: rotate(-1.5deg); display: flex; flex-direction: column; gap: 5px">
+      <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.05">exchange student</p>
+      <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 15px">/ɪksˈtʃeɪndʒ ˌstuːdənt/ noun</p>
+      <ol style="margin: 6px 0 0; padding: 8px 0 0 18px; border-top: 1px solid #2f4156; font-size: 13px; font-weight: 400; line-height: 1.7">
+        <li>a student from one country who attends a school in another country</li>
+      </ol>
+    </div>
+    <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; font-size: 34px; line-height: 1.1">Finding my place</h3>
+    <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.9">With an accent and broken English, I made my way across the world. I worked hard to find my place and navigate life as an exchange student in a way that allowed me to feel like I was part of something rather than simply a visitor. My goal was to stand out academically, regardless of where I came from. I wanted to prove to myself, but also to anyone who had ever found themselves in a similar position, that passion and determination can take you far, even when you don’t necessarily have the same starting point as everyone else. Rather than seeing my different cultural background as a disadvantage, I learned to embrace it and turn it into my strength. I realized that being different was never something I had to overcome, but something I learned to grow from.</p>
+  </div>
+
+
+</div>
+</template>
+<template id="tpl-Northampton">
+<div style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb; width: 100%; box-sizing: border-box; padding: clamp(24px, 3vw, 40px) clamp(20px, 4vw, 56px) clamp(32px, 4vw, 56px)">
+
+  <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column">
+    <div style="margin-top: 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 40px">
+      <div style="display: flex; flex-direction: column">
+      <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 44px; line-height: 0.8; color: #567c8d">Chapter four</p>
+      <h2 style="margin: 10px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 4.5vw, 56px); line-height: 0.92; text-transform: uppercase">Northampton, Massachusetts</h2>
+      <p style="margin: 14px 0 0; font-size: 12px; font-weight: 400; letter-spacing: 0.14em">MY HIGH SCHOOL YEARS</p>
+      </div>
+    </div>
+    <p style="margin: 28px 0 0; font-size: 17px; line-height: 1.9">The support of my family and teachers ultimately led me to stay in the United States, not just as an exchange student for a single year, but as an international student pursuing an American high school diploma. I transferred to Williston Northampton, a boarding school in Western Massachusetts, where I was challenged in ways I had never experienced before.</p>
+    <span aria-hidden="true" style="display: block; width: 48px; height: 1px; margin: 44px 0; background: #2f4156"></span>
+    <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; font-size: 34px; line-height: 1.1">Finding my voice</h3>
+    <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.9">Surrounded by academically driven and like-minded individuals, I was encouraged to explore my potential and pursue my passions. I began publishing articles for the school newspaper, took on AP-level classes, and became the Varsity Dance Captain, all to show that potential is not determined by where one comes from, but by what one chooses to make of the opportunities they are given.</p>
+    <div style="margin-top: 48px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px">
+      <a class="pill" href="https://www.willistonian.org/staff_name/julianna-tatar-25/" target="_blank" rel="noopener noreferrer" style="padding: 18px 36px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 14px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">READ MY ARTICLES IN THE WILLISTONIAN</a>
+      <div style="width: 280px; background: #c8d9e6; box-sizing: border-box; padding: 18px 20px 20px; box-shadow: 0 12px 28px rgba(47, 65, 86, 0.12); transform: rotate(-1.5deg); display: flex; flex-direction: column; gap: 5px">
+        <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.05">boarding school</p>
+        <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 15px">/ˈbɔrdɪŋ ˌskul/ noun</p>
+        <ol style="margin: 6px 0 0; padding: 8px 0 0 18px; border-top: 1px solid #2f4156; font-size: 13px; font-weight: 400; line-height: 1.7">
+          <li>a school where students can live during the school term</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</template>
+<template id="tpl-Boston">
+<div style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-weight: 300; color: #2f4156; background: #f5efeb; width: 100%; box-sizing: border-box; padding: clamp(24px, 3vw, 40px) clamp(20px, 4vw, 56px) clamp(32px, 4vw, 56px)">
+
+  <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column">
+    <div style="margin-top: 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 40px">
+      <div style="display: flex; flex-direction: column">
+      <p style="margin: 0; font-family: 'Mrs Saint Delafield', cursive; font-size: 44px; line-height: 0.8; color: #567c8d">Chapter five</p>
+      <h2 style="margin: 10px 0 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: clamp(40px, 4.5vw, 56px); line-height: 0.92; text-transform: uppercase">Boston, Massachusetts</h2>
+      <p style="margin: 14px 0 0; font-size: 12px; font-weight: 400; letter-spacing: 0.14em">WHERE I AM NOW</p>
+      </div>
+    </div>
+    <p style="margin: 28px 0 0; font-size: 17px; line-height: 1.9">Boston, the place that allows me to do exactly what I love. Studying communication and media has been the most purposeful and enriching experience of my life so far. I get to create and analyze media, finding meaning in texts that would otherwise go unnoticed. I learn theories that help us make sense of how we navigate life. I see the power of language and how it shapes perception, and even reality. I’ve become more mindful of power dynamics and current political issues, and of the ways they are framed.</p>
+    <span aria-hidden="true" style="display: block; width: 48px; height: 1px; margin: 44px 0; background: #2f4156"></span>
+    <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-style: italic; font-size: 34px; line-height: 1.1">Finding philosophy</h3>
+    <p style="margin: 16px 0 0; font-size: 17px; line-height: 1.9">I have also recently discovered philosophy as another way of approaching the world around me. It has taught me to examine arguments more critically, recognize gaps in logic and appreciate the importance of asking questions that do not always have simple answers. I believe that the willingness to keep questioning and thinking is part of what makes us human, which is why philosophy has been such a meaningful addition to my life.</p>
+    <span aria-hidden="true" style="display: block; width: 48px; height: 1px; margin: 44px 0; background: #2f4156"></span>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px 40px">
+      <blockquote style="flex: 1 1 360px; margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 26px; line-height: 1.4">As Kant put it, “sapere aude”: dare to know. Dare to think. Dare to live as though your mind is your own, because until you do, it belongs to whoever got there first.</blockquote>
+      <div style="width: 260px; background: #c8d9e6; box-sizing: border-box; padding: 18px 20px 20px; box-shadow: 0 12px 28px rgba(47, 65, 86, 0.12); transform: rotate(1.5deg); display: flex; flex-direction: column; gap: 5px">
+        <p lang="la" style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.05">sapere aude</p>
+        <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 15px">/ˈsa.pe.re ˈau̯.deː/ Latin phrase</p>
+        <ol style="margin: 6px 0 0; padding: 8px 0 0 18px; border-top: 1px solid #2f4156; font-size: 13px; font-weight: 400; line-height: 1.7">
+          <li>dare to know</li>
+          <li>have the courage to think for yourself</li>
+        </ol>
+      </div>
+    </div>
+    <a class="pill" href="#writing" style="align-self: flex-start; margin-top: 48px; padding: 18px 36px; border-radius: 999px; background: #2f4156; color: #f5efeb; font-size: 14px; font-weight: 400; letter-spacing: 0.12em; text-decoration: none">SEE MY CURRENT WORK</a>
+  </div>
+
+
+</div>
+</template>
+
+<script src="runtime.js"></script>
+<script src="sections.js"></script>
+<script>mountSite('Main', document.getElementById('site'));</script>
+</body>
+</html>

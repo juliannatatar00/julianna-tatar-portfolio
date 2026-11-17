@@ -1,0 +1,137 @@
+/* Julianna Tatar portfolio styles */
+
+/* from Main */
+body{margin:0;background:#f5efeb}
+.slide{scroll-margin-top:0;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;box-sizing:border-box}
+.site{zoom:.85}
+#contact.slide{min-height:820px}
+@media (max-width:700px){#contact.slide{min-height:0}}
+.slide+.slide{border-top:1px solid rgba(47,65,86,.12)}
+@media (max-width:700px){.slide{min-height:0}}
+.acc{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)}.acc.open{grid-template-rows:1fr}.acc-in{overflow:hidden;min-height:0}.acc-in>*{opacity:0;transition:opacity .35s ease}.acc.open .acc-in>*{opacity:1}.acc-icon{display:inline-block;transition:transform .35s ease}.acc-icon.open{transform:rotate(45deg)}
+.artrow .arw{display:inline-block;transition:transform .3s ease}.artrow:hover .arw{transform:translate(3px,-3px)}.artrow:hover{color:#567c8d!important}
+@media (max-width:700px){.vc-note{position:relative!important;left:auto!important;top:auto!important;width:auto!important;margin-top:16px}}
+.page{display:flex;flex-direction:column;box-sizing:border-box}
+.navlink.on{background-size:100% 1px}
+button:disabled{opacity:.35;cursor:default}
+.ul{background-image:linear-gradient(#2f4156,#2f4156);background-size:0 1px;background-repeat:no-repeat;background-position:0 85%;transition:background-size .35s ease,color .25s ease}
+.ul:hover{background-size:100% 1px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.pin:hover .pin-label{color:#c8d9e6}
+.pin:active{transform:translate(-50%,-50%) scale(.9)!important}
+a{color:#2f4156}a:hover{color:#567c8d}
+button,a{transition:color .25s ease,background-color .3s ease,border-color .3s ease,transform .2s ease,letter-spacing .3s ease}
+button:active,a:active{transform:scale(.97)}
+button:focus-visible,a:focus-visible{outline:2px solid #567c8d;outline-offset:3px}
+.pill:hover{letter-spacing:.16em}
+.row:hover .num{transform:translateX(6px)}
+.num{transition:transform .3s ease}
+.polaroid{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease}
+.tilt-a{transform:rotate(-2.5deg)}.tilt-b{transform:rotate(1.5deg) translateY(24px)}.tilt-c{transform:rotate(-1deg)}
+.polaroid:hover{transform:rotate(0) translateY(-8px);box-shadow:0 22px 40px rgba(47,65,86,.18)}
+.polaroid.chosen{transform:rotate(0) translateY(-10px);outline:2px solid #2f4156;outline-offset:8px;box-shadow:0 22px 40px rgba(47,65,86,.18)}
+.row[aria-expanded="true"]{background:#FFFFFF}
+.row[aria-expanded="true"] .num{transform:translateX(6px)}
+.drift{transition:transform .6s ease}.drift:hover{transform:translateY(-6px)}
+@media (max-width:640px){.indent{padding-left:0!important}}
+.pin-ring{position:absolute;inset:0;margin:auto;width:20px;height:20px;border-radius:50%;border:1.5px solid #f5efeb}
+@media (prefers-reduced-motion:no-preference){
+.route{stroke-dasharray:3 7;animation:march 2.4s linear infinite}
+.fade{animation:fadeUp .55s ease both}
+.pin-ring{animation:ring 2s ease-out infinite}
+.rise{animation:fadeUp .9s ease both}
+.rise2{animation:fadeUp .9s .25s ease both}
+.rise3{animation:fadeUp .9s .5s ease both}
+}
+@keyframes march{to{stroke-dashoffset:-20}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(2.4);opacity:0}}
+@media (max-width:700px){.pin-label{display:none}.side-word{display:none}}
+
+/* from Nav */
+body{margin:0}
+
+/* from About */
+body{margin:0;background:#f5efeb}
+.acc{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)}.acc.open{grid-template-rows:1fr}.acc-in{overflow:hidden;min-height:0}.acc-in>*{opacity:0;transition:opacity .35s ease}.acc.open .acc-in>*{opacity:1}.acc-icon{display:inline-block;transition:transform .35s ease}.acc-icon.open{transform:rotate(45deg)}
+.artrow .arw{display:inline-block;transition:transform .3s ease}.artrow:hover .arw{transform:translate(3px,-3px)}.artrow:hover{color:#567c8d!important}
+@media (max-width:700px){.vc-note{position:relative!important;left:auto!important;top:auto!important;width:auto!important;margin-top:16px}}
+.page{display:flex;flex-direction:column;box-sizing:border-box}
+.navlink.on{background-size:100% 1px}
+button:disabled{opacity:.35;cursor:default}
+.ul{background-image:linear-gradient(#2f4156,#2f4156);background-size:0 1px;background-repeat:no-repeat;background-position:0 85%;transition:background-size .35s ease,color .25s ease}
+.ul:hover{background-size:100% 1px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.pin:hover .pin-label{color:#c8d9e6}
+.pin:active{transform:translate(-50%,-50%) scale(.9)!important}
+a{color:#2f4156}a:hover{color:#567c8d}
+button,a{transition:color .25s ease,background-color .3s ease,border-color .3s ease,transform .2s ease,letter-spacing .3s ease}
+button:active,a:active{transform:scale(.97)}
+button:focus-visible,a:focus-visible{outline:2px solid #567c8d;outline-offset:3px}
+.pill:hover{letter-spacing:.16em}
+.row:hover .num{transform:translateX(6px)}
+.num{transition:transform .3s ease}
+.polaroid{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease}
+.tilt-a{transform:rotate(-2.5deg)}.tilt-b{transform:rotate(1.5deg) translateY(24px)}.tilt-c{transform:rotate(-1deg)}
+.polaroid:hover{transform:rotate(0) translateY(-8px);box-shadow:0 22px 40px rgba(47,65,86,.18)}
+.polaroid.chosen{transform:rotate(0) translateY(-10px);outline:2px solid #2f4156;outline-offset:8px;box-shadow:0 22px 40px rgba(47,65,86,.18)}
+.row[aria-expanded="true"]{background:#FFFFFF}
+.row[aria-expanded="true"] .num{transform:translateX(6px)}
+.drift{transition:transform .6s ease}.drift:hover{transform:translateY(-6px)}
+@media (max-width:640px){.indent{padding-left:0!important}}
+.pin-ring{position:absolute;inset:0;margin:auto;width:20px;height:20px;border-radius:50%;border:1.5px solid #f5efeb}
+@media (prefers-reduced-motion:no-preference){
+.route{stroke-dasharray:3 7;animation:march 2.4s linear infinite}
+.fade{animation:fadeUp .55s ease both}
+.pin-ring{animation:ring 2s ease-out infinite}
+.rise{animation:fadeUp .9s ease both}
+.rise2{animation:fadeUp .9s .25s ease both}
+.rise3{animation:fadeUp .9s .5s ease both}
+}
+@keyframes march{to{stroke-dashoffset:-20}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(2.4);opacity:0}}
+@media (max-width:700px){.pin-label{display:none}.side-word{display:none}}
+
+/* from Writing */
+body{margin:0;background:#f5efeb}
+.acc{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)}.acc.open{grid-template-rows:1fr}.acc-in{overflow:hidden;min-height:0}.acc-in>*{opacity:0;transition:opacity .35s ease}.acc.open .acc-in>*{opacity:1}.acc-icon{display:inline-block;transition:transform .35s ease}.acc-icon.open{transform:rotate(45deg)}
+.artrow .arw{display:inline-block;transition:transform .3s ease}.artrow:hover .arw{transform:translate(3px,-3px)}.artrow:hover{color:#567c8d!important}
+@media (max-width:700px){.vc-note{position:relative!important;left:auto!important;top:auto!important;width:auto!important;margin-top:16px}}
+.page{display:flex;flex-direction:column;box-sizing:border-box}
+.navlink.on{background-size:100% 1px}
+button:disabled{opacity:.35;cursor:default}
+.ul{background-image:linear-gradient(#2f4156,#2f4156);background-size:0 1px;background-repeat:no-repeat;background-position:0 85%;transition:background-size .35s ease,color .25s ease}
+.ul:hover{background-size:100% 1px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.pin:hover .pin-label{color:#c8d9e6}
+.pin:active{transform:translate(-50%,-50%) scale(.9)!important}
+a{color:#2f4156}a:hover{color:#567c8d}
+button,a{transition:color .25s ease,background-color .3s ease,border-color .3s ease,transform .2s ease,letter-spacing .3s ease}
+button:active,a:active{transform:scale(.97)}
+button:focus-visible,a:focus-visible{outline:2px solid #567c8d;outline-offset:3px}
+.pill:hover{letter-spacing:.16em}
+.row:hover .num{transform:translateX(6px)}
+.num{transition:transform .3s ease}
+.polaroid{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease}
+.tilt-a{transform:rotate(-2.5deg)}.tilt-b{transform:rotate(1.5deg) translateY(24px)}.tilt-c{transform:rotate(-1deg)}
+.polaroid:hover{transform:rotate(0) translateY(-8px);box-shadow:0 22px 40px rgba(47,65,86,.18)}
+.polaroid.chosen{transform:rotate(0) translateY(-10px);outline:2px solid #2f4156;outline-offset:8px;box-shadow:0 22px 40px rgba(47,65,86,.18)}
+.row[aria-expanded="true"]{background:#FFFFFF}
+.row[aria-expanded="true"] .num{transform:translateX(6px)}
+.drift{transition:transform .6s ease}.drift:hover{transform:translateY(-6px)}
+@media (max-width:640px){.indent{padding-left:0!important}}
+.pin-ring{position:absolute;inset:0;margin:auto;width:20px;height:20px;border-radius:50%;border:1.5px solid #f5efeb}
+@media (prefers-reduced-motion:no-preference){
+.route{stroke-dasharray:3 7;animation:march 2.4s linear infinite}
+.fade{animation:fadeUp .55s ease both}
+.pin-ring{animation:ring 2s ease-out infinite}
+.rise{animation:fadeUp .9s ease both}
+.rise2{animation:fadeUp .9s .25s ease both}
+.rise3{animation:fadeUp .9s .5s ease both}
+}
+@keyframes march{to{stroke-dashoffset:-20}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(2.4);opacity:0}}
+@media (max-width:700px){.pin-label{display:none}.side-word{display:none}}
+@media (max-width:1360px){.side-word{display:none!important}}
